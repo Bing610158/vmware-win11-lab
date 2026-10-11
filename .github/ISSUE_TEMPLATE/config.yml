@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Windows 11 官方下载（镜像唯一推荐来源）
+    url: https://www.microsoft.com/software-download/windows11
+    about: 本仓库不提供任何 Windows 镜像，请从微软官方网站获取
+  - name: VMware Workstation 产品文档
+    url: https://techdocs.broadcom.com/
+    about: 虚拟机配置项与命令行工具的官方说明

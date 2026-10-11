@@ -1,0 +1,97 @@
+name: 故障报告
+description: 报告在 VMware 中部署 Windows 11 时遇到的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。提交前请先搜索现有 Issue，确认问题尚未被记录，并确认它与 **VMware 部署 Windows 11** 相关。
+
+        **请勿粘贴**：虚拟机加密密码、产品密钥（及其任何片段）、可识别个人信息。
+        本仓库不提供、不讨论任何授权绕过手段，相关请求会被直接关闭。
+  - type: input
+    id: vmware-version
+    attributes:
+      label: VMware Workstation 版本
+      description: 菜单「帮助 → 关于」
+      placeholder: "17.6.2 build-24409262"
+    validations:
+      required: true
+  - type: input
+    id: host-os
+    attributes:
+      label: 宿主机系统版本
+      description: 运行 winver 查看
+      placeholder: "Windows 11 25H2 Build 26200.9457"
+    validations:
+      required: true
+  - type: input
+    id: hw-version
+    attributes:
+      label: 虚拟机硬件版本
+      description: .vmx 文件中的 virtualHW.version
+      placeholder: "21"
+    validations:
+      required: false
+  - type: dropdown
+    id: network-mode
+    attributes:
+      label: 虚拟机网络模式
+      options:
+        - NAT
+        - 桥接
+        - 仅主机
+        - 未配置网络适配器
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 操作顺序、涉及的命令、预期结果与实际结果
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: error-text
+    attributes:
+      label: 完整错误文本
+      description: 直接粘贴文本，不要只放截图
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: vmware-log
+    attributes:
+      label: 相关日志片段
+      description: 虚拟机目录下 vmware.log 中的相关行
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: network-diag
+    attributes:
+      label: 网络诊断输出（仅网络问题时填写）
+      description: 在宿主机 PowerShell 中执行以下命令并粘贴输出
+      value: |
+        Get-Service 'VMware NAT Service', 'VMnetDHCP' | Select-Object Name, Status, StartType
+        Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -like '*VMnet*' }
+        Get-NetRoute -AddressFamily IPv4 | Where-Object { $_.DestinationPrefix -like '*.*.*.*/32' }
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索现有 Issue，确认该问题尚未被记录
+          required: true
+        - label: 我已删除所有密码、产品密钥与可识别个人信息
+          required: true
+        - label: 我确认该问题与 VMware 部署 Windows 11 相关，且不涉及授权绕过
+          required: true

@@ -1,0 +1,42 @@
+NOTICE
+======
+
+本项目：vmware-win11-lab
+Copyright (c) 2026 vmware-win11-lab contributors
+
+
+一、许可证适用范围
+------------------
+
+本仓库采用 MIT 协议（完整文本见 LICENSE 文件）。
+
+MIT 协议的保护范围**仅限本仓库中由本项目作者创作的教程文档、配置示例与脚本**。
+
+
+二、不在 MIT 协议覆盖范围内的内容
+--------------------------------
+
+1. Microsoft Windows 操作系统及其任何组件，版权归 Microsoft Corporation 所有。
+   本仓库不包含、不分发、不镜像任何 Windows 系统镜像文件（ISO / ESD / WIM 等），
+   也不包含任何产品密钥。
+
+2. VMware Workstation 及其任何组件，版权归 Broadcom / VMware 所有。
+
+3. 文档中引用的第三方商标、产品名称与服务名称，归各自权利人所有。
+
+
+三、镜像来源
+------------
+
+本项目文档中给出的 Windows 11 镜像获取渠道，仅为微软官方网站：
+
+    https://www.microsoft.com/software-download/windows11
+    https://www.microsoft.com/evalcenter/download-windows-11-enterprise
+
+使用者须自行从官方渠道获取镜像，并遵守微软最终用户许可协议（EULA）。
+
+
+四、项目性质
+------------
+
+本仓库仅提供技术教程与配置说明，不提供任何授权、激活手段或授权规避工具。
