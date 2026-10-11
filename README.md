@@ -1,8 +1,8 @@
 # vmware-win11-lab · VMware Workstation 部署 Windows 11 实战手册
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-VMware%20Workstation%2017.x-blue.svg)]()
-[![Guest](https://img.shields.io/badge/guest-Windows%2011%20x64-0078D4.svg)]()
+![Platform](https://img.shields.io/badge/platform-VMware%20Workstation%2017.x-blue.svg)
+![Guest](https://img.shields.io/badge/guest-Windows%2011%20x64-0078D4.svg)
 
 > 本仓库仅提供部署教程与配置文档，不含任何 Windows 镜像、产品密钥或授权手段；镜像请从微软官方网站获取。
 >
@@ -224,7 +224,7 @@ D:\Windows11 BUILTIN\Administrators:(I)(OI)(CI)(F)
              NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
 ```
 
-若当前进程为非提权进程，有效权限仅剩 `Everyone:(RX)`，**无法写入 `.vmx`**，将直接导致[问题 1](#问题-1创建虚拟机报无法打开配置文件-vmx拒绝访问)。
+若当前进程为非提权进程，有效权限仅剩 `Everyone:(RX)`，**无法写入 `.vmx`**，将直接导致[问题 1](#问题-1创建虚拟机报无法打开配置文件--vmx拒绝访问)。
 
 授予当前账户 Modify 权限（需管理员权限执行）：
 
