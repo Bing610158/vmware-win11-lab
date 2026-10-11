@@ -766,7 +766,7 @@ D:\Windows11 LAPTOP-485G0VPR\LEN:(OI)(CI)(M)
 
 配套脚本：[scripts/Repair-VMFolderACL.ps1](scripts/Repair-VMFolderACL.ps1)
 
-<!-- Screenshot: 「拒绝访问」错误对话框 -->
+![「拒绝访问」错误对话框](docs/images/03-access-denied.png)
 <!-- Screenshot: icacls 修复前后的输出对比 -->
 
 ---
@@ -836,7 +836,7 @@ E1000: e1000e-- tx queue 1 is enabled.
 
 配套脚本：[scripts/Add-NicToVMX.ps1](scripts/Add-NicToVMX.ps1)
 
-<!-- Screenshot: OOBE 错误 0xe000022f -->
+![OOBE 错误 0xe000022f](docs/images/10-oobe-0xe000022f.png)
 
 ---
 
